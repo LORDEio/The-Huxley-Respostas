@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n, f, x, y, qtd, nivel, menor;
+    int v[1000] = {0};
+    scanf("%d%d", &n, &f);
+    for(x=0; x<f; x++)
+    {
+        scanf("%d", &qtd);
+        for (y = 0; y< qtd; y++)
+        {
+            scanf("%d", &nivel);
+            v[nivel] = v[nivel] + 1;
+        }
+    }
+    menor = v[1];
+    for (x = 2; x<= n; x++)
+    {
+        if(v[x]<menor)
+        {
+            menor = v[x];
+        }
+    }
+    printf("The %d friends could finish the game %d times\n", f, menor);
+    
+    
+	return 0;
+}
