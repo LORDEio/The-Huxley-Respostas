@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+    int v[101], i;
+    
+    for(i = 0; i<101; i++)
+       scanf("%d", &v[i]);
+       
+       
+    for(i = 0; i<100; i++)
+    {
+        if(v[i] == v[100])
+        {
+            printf("%d\n", i);
+        }
+    }
+    
+	return 0;
+}
