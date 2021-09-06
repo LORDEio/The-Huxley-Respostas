@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n, m, k, x, menor;
+    int a[10000], b[10000];
+    scanf("%d%d%d", &n, &m, &k);
+    for(x=0; x<n; x++)
+    {
+        scanf("%d", &a[x]);
+    }
+    for(x =0; x<m; x++)
+    {
+        scanf("%d", &b[x]);
+    }
+    if (n < m)
+    {
+        menor = n;
+    }
+    else
+    {
+        menor = m;
+    }
+    for(x =0; x< menor; x++)
+    {
+        if(k==1)
+        {
+            printf("%d\n", b[x]);
+            printf("%d\n", a[x]);
+        }
+        else
+        {
+            printf("%d\n", a[x]);
+            printf("%d\n", b[x]);
+        }
+    }
+    if(n > menor)
+    {
+        for(x = menor; x< n; x++)
+        {
+            printf("%d\n", a[x]);
+        }
+    }
+    else if( m> menor)
+    {
+        for(x=menor; x<m; x++)
+        {
+            printf("%d\n", b[x]);
+        }
+    }
+    
+	return 0;
+}
