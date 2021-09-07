@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {{
+
+  int i, progii[45], progiii[30], z, seq[4], m, j;
+    int k=0;
+
+    for(i=0; i<45; i++){
+    scanf("%d", &progii[i]);
+    }
+   for(i=0; i<30; i++){
+    scanf("%d", &progiii[i]);
+    }
+    for(i = 0; i < 45; i++){
+        for(j = 0; j < 30; j++){
+            if(progii[i] == progiii[j]){
+
+                printf("%d ", progii[i]);
+            }
+        }
+    }
+	return 0;
+    }
+}
