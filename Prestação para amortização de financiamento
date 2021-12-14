@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+double prestacao(double valor, int n, double taxa);
+int main() {
+    double F, t, P;
+    int n;
+    scanf("%lf%d%lf", &F, &n, &t);
+    P = prestacao (F, n, t);
+    printf("%d\n", (int)P);
+	return 0;
+}
+double prestacao(double valor, int n, double taxa)
+{
+    double aux;
+    aux = valor / (((pow(1+taxa, n)-1))/ (taxa *pow(1+taxa,n)));
+    return aux;
+}
