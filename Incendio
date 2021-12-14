@@ -1,0 +1,37 @@
+struct incendio{
+    int id;
+    float temp;
+    char fumaca;
+};
+
+int main() {
+    int i=1, j;
+    int qtd_Testes, qtd_Sprink;
+    float media;
+    scanf("%d", &qtd_Testes);
+    
+    while(i<=qtd_Testes){
+        j=0; media=0;
+        printf("TESTE %d\n", i);
+        
+        scanf("%d\n", &qtd_Sprink);
+        struct incendio in_var[qtd_Sprink];
+        
+        while(j<qtd_Sprink){
+            scanf("%d\n", &in_var[j].id);
+            scanf("%f\n", &in_var[j].temp);
+            scanf("%c\n", &in_var[j].fumaca);
+            media += (in_var[j].temp/qtd_Sprink);
+            j++;
+        }
+        j=0;
+        while(j<qtd_Sprink){
+            if(in_var[j].temp>40 || in_var[j].temp>(media*1.15) || in_var[j].fumaca == 'S'){
+                printf("%d\n", in_var[j].id);
+            }
+            j++;
+        }
+        i++;
+    }
+    return 0;
+}
