@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+        float a, b, h, hf;
+          scanf("%f\n", &a);
+          scanf("%f", &b);
+            
+             h = (a*a)+(b*b);
+             hf = sqrt(h);
+                 
+                 printf("%.2f", hf);
+          
+	return 0;
+}
