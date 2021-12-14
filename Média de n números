@@ -1,0 +1,31 @@
+int main() {
+    float n[10000];
+    float media=0, dev=0;
+    int k=0, j=0, i;
+
+    for(i=0; i<10000; i++){
+            scanf("%f", &n[i]);
+            if(n[i] == -1){
+            j=i;
+            break;
+        }
+        media += n[i];
+    }
+        media /= i;
+
+    for(i=0; i<j; i++){
+        if(n[i]>media){
+            k = k + 1;
+        }
+            dev = dev + ((n[i]-media)*(n[i]-media));
+    }
+    dev /= (j-1);
+    dev = pow(dev, 0.5);
+
+
+                printf("%.2f\n", media);
+                printf("%.2f\n", dev);
+                printf("%d", k);
+
+    return 0;
+}
