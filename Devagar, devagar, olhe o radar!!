@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() { {
+
+            int maxV, carV, pts;
+            float valM1, valM2, valMF1, valMF2, carteira;
+
+                    scanf("%d", &maxV);
+                    scanf("%d", &carV);
+
+                    valM1 = (int)maxV * (0.20);
+                    valM2 = (int)maxV * (0.50);
+
+                    valMF1 = valM1 + (int)maxV;
+                    valMF2 = valM2 + (int)maxV;
+
+                    if((maxV<carV) && (carV<=valMF1)){
+                        carteira =  (85.13);
+                        pts = 4;
+                            printf("%.2f\n", carteira);
+                            printf("%d", pts);
+                    }else{
+                        if((valMF2>=carV) && (carV>valMF1)){
+                        carteira =  (127.69);
+                        pts = 5;
+                            printf("%.2f\n", carteira);
+                            printf("%d", pts);
+                        }
+                        else{
+                            if(carV>valMF2){
+                            carteira =  (574.62);
+                            pts = 7;
+                                printf("%.2f\n", carteira);
+                                printf("%d", pts);
+                            }
+                            else{
+                                printf("0.00\n");
+                                printf("0");
+                            }
+                          }
+                        }
+                        }
+
+
+
+
+	return 0;
+}
