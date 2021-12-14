@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+char verificarMatrizEscada(int, int);
+
+int main() {
+
+    int nLinhas, mColunas;
+    scanf("%d %d", &nLinhas, &mColunas);
+    printf("%c", verificarMatrizEscada(nLinhas, mColunas));
+	return 0;
+}
+
+char verificarMatrizEscada(int nLinhas, int mColunas){
+int matriz[nLinhas][mColunas];
+int l, c, l2, c2;
+for(l=0; l<nLinhas; l++)
+    for(c=0; c<mColunas; c++)
+        scanf(" %d", &matriz[l][c]);
+        for(l=0; l<nLinhas; l++)
+            {
+                for(c=0; c<=mColunas; c++)
+                {
+                    if(c==mColunas)
+                        {
+                           for(l2=l+1; l2<nLinhas; l2++)
+                                for(c2=0; c2<=mColunas; c2++)
+                                if(matriz[l2][c2] != 0)
+                                return 'N';
+                           return 'S';
+
+                        }else{
+                            if(matriz[l][c]!=0)
+                        {
+                            for(l2=l+1; l2<nLinhas; l2++)
+                                for(c2=0; c2<=c; c2++)
+                                if(matriz[l2][c2] != 0)
+                                return 'N';
+                            c = mColunas +1;
+                        }
+                    }
+                }
+            }
+            return 'S';
+}
