@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+    float n1, n2, n3, media;
+    int final;
+         
+         scanf("%f""%f""%f", &n1, &n2, &n3);
+         
+            media = (n1 + n2 + n3)/3;
+              if(n1>media)
+              final++;
+              if(n2>media)
+              final++;
+              if(n3>media)
+              final++;
+                    
+                    printf("%d", final);
+	return 0;
+}
