@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    float q, p, h, paointeiro, kgq, kgp, kgh;
+    scanf("%f", &paointeiro);
+    
+         q = paointeiro * 100;
+         p = paointeiro * 50;
+         h = paointeiro * 100;
+         
+        printf("%.2f\n",kgq = q/1000);
+        printf("%.2f\n",kgp = p/1000);
+        printf("%.2f\n",kgh = h/1000);
+        
+        
+        
+	return 0;
+}
