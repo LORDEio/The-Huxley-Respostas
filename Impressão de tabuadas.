@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main(void) {
+  int n1, n2, i, j;
+    scanf("%d", &n1);
+    while (n1 < 1 || n1 > 9)
+    {
+        printf("Insira um número inicial entre 1 e 9\n");
+        scanf("%d", &n1);
+    }
+
+    scanf("%d", &n2);
+    while (n2 < 1 || n2 > 9)
+    {
+        printf ("Insira um número final entre 1 e 9\n");
+        scanf("%d", &n2);
+    }
+    if (n1 > n2)
+    {
+        printf("Nenhuma tabuada nesse intervalo\n");
+        return 0; 
+    }
+
+ for (i = n1; i <= n2; i++)
+ {
+     for (j = 1; j <= 9; j++)
+    {
+        printf("%d x %d = %d\n", i, j, i * j);
+    }
+    printf("\n");
+ }
+  return 0;
+}
