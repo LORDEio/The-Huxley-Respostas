@@ -1,0 +1,88 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+    int tam, n, i, j, k;
+    char cadeia1[51], cadeia2[51];
+    
+    scanf("%d\n", &n);
+    for(i = 0; i < n; i++)
+    {
+        
+            fgets(cadeia1, 51, stdin);
+            tam = strlen(cadeia1);
+        if(cadeia1[tam - 1] == '\n')
+        {
+            cadeia1[tam - 1] = '\0';
+        }
+            fgets(cadeia2, 51, stdin);
+            tam = strlen(cadeia2);
+        if(cadeia2[tam - 1] == '\n')
+        {
+            cadeia2[tam - 1] = '\0';
+        }
+        
+            tam = strlen(cadeia1);
+            k = 0;
+            
+        for(j = 0; j < tam; j++)
+        {
+            if(cadeia1[j] == 'A')
+            {
+                if(cadeia2[j] == 'T')
+                {
+                    k ++;
+                }
+                else if(cadeia2[j] != 'T')
+                {
+                    cadeia2[j] = 'T';
+                }
+            }
+            if(cadeia1[j] == 'C')
+            {
+                if(cadeia2[j] == 'G')
+                {
+                    k ++;
+                }
+                else if(cadeia2[j] != 'G')
+                {
+                    cadeia2[j] = 'G';
+                }
+            }
+            if(cadeia1[j] == 'G')
+            {
+                if(cadeia2[j] == 'C')
+                {
+                    k ++;
+                }
+                else if(cadeia2[j] != 'C')
+                {
+                    cadeia2[j] = 'C';
+                }
+            }
+            if(cadeia1[j] == 'T')
+            {
+                if(cadeia2[j] == 'A')
+                {
+                    k ++;
+                }
+                else if(cadeia2[j] != 'A')
+                {
+                    cadeia2[j] = 'A';
+                }
+            }
+        }
+        if(k == tam)
+        {
+            printf("COMPLEMENTARES\n");
+        }
+        else if(k < tam)
+        {
+            printf("NAO COMPLEMENTARES\n%s\n", cadeia2);
+        }
+    }
+    return 0;
+}
