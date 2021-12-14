@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+typedef struct
+  {
+    char marca[16];
+    int ano;
+    float preco;
+  }dados;
+
+int main(void) 
+{
+  int i=0;
+  dados dados_var[3];
+  float p;
+
+  printf("Digite marca, ano e valor dos 3 carros:\n");
+  for(i = 0; i < 3; i++)
+  {
+    scanf("%s\n", dados_var[i].marca);
+    fflush(stdin);
+    scanf("%d\n", &dados_var[i].ano);
+    fflush(stdin);
+    scanf("%f", &dados_var[i].preco);
+     
+  }
+  printf("Digite o preco maximo:\n");
+  scanf("%f", &p);
+  
+  for(i = 0; i < 3; i++)
+  {
+      if(dados_var[i].preco < p)
+      {
+          printf("%s\n", dados_var[i].marca);
+          printf("%d\n", dados_var[i].ano);
+          printf("%2.f\n", dados_var[i].preco);
+      }
+   }
+
+  
+  return 0;
+}
