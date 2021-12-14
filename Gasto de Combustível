@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+    float l, hr, vm;
+    
+         scanf("%f\n", &hr);
+         scanf("%f", &vm);
+         
+           l = (hr * vm)/12;
+              
+              printf("%.3f", l);
+         
+	return 0;
+}
