@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+    int i, j, qtd;
+    char *tmp;
+    char entrada[256], copia[256];
+    
+    
+    scanf("%d", &qtd);
+    
+    while(qtd > 0) 
+    {
+        scanf(" %[^\n]", entrada);
+        
+        i = 0;
+        while(i < strlen(entrada)) 
+        {
+            if(entrada[i] == ' ') 
+            {
+                for(j = i; j < strlen(entrada); j++) 
+                {
+                    entrada[j] = entrada[j + 1];
+                }
+            } 
+            else 
+            {
+                i++;
+            }
+        }
+    for(i = 0, j = strlen(entrada) - 1; i < strlen(entrada); i++, j--) 
+    {
+        entrada[i] = tolower(entrada[i]);
+        copia[j]   = entrada[i];
+    }
+    copia[i] = '\0';
+    
+    
+    printf("%s\n", strcmp(copia, entrada) == 0 ? "SIM" : "NAO");
+    qtd--;
+    }
+    return 0;
+    
+}
