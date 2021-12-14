@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main(void) 
+{
+    int n, fatorial = 1, i;
+    
+    scanf("\n%d", &n);
+    do
+    {
+        fatorial = 1;
+    
+        for (i = n; i > 1; i--) 
+        {
+          fatorial = fatorial * i;
+        }
+        printf("\n%d", fatorial);
+        scanf("\n%d", &n);
+    }
+    while(n != -1);
+
+  return 0;
+}
