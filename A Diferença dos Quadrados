@@ -1,0 +1,33 @@
+int main() 
+{
+    int q1, q2, dif, i, aux;
+    scanf("%d\n", &dif);
+    
+    if(dif > 0 && dif <= 10000 && dif % 2 != 0)
+    {
+        do
+        {
+            for(i = 1; i <= dif; i++)
+            {
+            
+                q1 = pow(i, 2);
+            
+                aux = i - 1;
+            
+                q2 = pow(aux, 2);
+            
+                if(q1 - q2 == dif)
+                {
+                    printf("%d - %d\n", q1, q2);
+                }
+            }
+            
+            scanf("%d\n", &dif);
+            
+        }while(dif > 0);
+            
+        
+    }
+
+    return 0;
+}
