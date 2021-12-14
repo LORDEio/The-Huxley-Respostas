@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    float nom1val, pesonom1val, media, nota1, nota;
+    int nom1[100];
+    int pesonom1[100];
+    int i=0, qntdeN;
+
+    scanf("%d", &qntdeN);
+    for(i=0; i<qntdeN; i++)
+    {
+        scanf("%d", &nom1[i]);
+        nom1val= nom1[i]+ nom1val;
+    }
+    for(i=0; i<qntdeN; i++)
+    {
+        scanf("%d", &pesonom1[i]);
+        nota1=pesonom1[i]*nom1[i];
+        nota= nota1+ nota;
+        pesonom1val= pesonom1[i]+ pesonom1val;
+    }
+    media=nota/pesonom1val;
+    printf("%.2f", media);
+	return 0;
+}
