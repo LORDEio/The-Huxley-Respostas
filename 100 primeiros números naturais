@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    float n;
+    for(n=0; n<100; n++)
+    {
+        printf("%.0f\n", n);
+    }
+	return 0;
+}
