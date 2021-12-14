@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int ced, ced100, cedr100, ced50, ced50r, ced20, ced20r, ced10, ced10r, ced5, ced5r, ced2, ced2r, ced1;
+    
+         scanf("%d", &ced);
+            
+            ced100 = ced/100;
+            cedr100 = ced%100;
+            ced50 = cedr100/50;
+            ced50r = cedr100%50;
+            ced20 = ced50r/20;
+            ced20r = ced50r%20;
+            ced10 = ced20r/10;
+            ced10r = ced20r%10;
+            ced5 = ced10r/5;
+            ced5r = ced10r%5;
+            ced2 = ced5r/2;
+            ced2r = ced5r%2;
+            ced1 = ced2r/1;
+            
+                 printf("%d\n", ced);
+                 printf("%d nota(s) de R$ 100,00\n", ced100);
+                 printf("%d nota(s) de R$ 50,00\n", ced50);
+                 printf("%d nota(s) de R$ 20,00\n", ced20);
+                 printf("%d nota(s) de R$ 10,00\n", ced10);
+                 printf("%d nota(s) de R$ 5,00\n", ced5);
+                 printf("%d nota(s) de R$ 2,00\n", ced2);
+                 printf("%d nota(s) de R$ 1,00", ced1);
+            
+	return 0;
+}
