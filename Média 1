@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    float a, b, nota1, nota2, notafinal;
+
+    scanf("%f", &a);
+    scanf("%f", &b);
+
+    nota1 = a * (3.5);
+    nota2 = b * (7.5);
+
+    notafinal = (nota1 + nota2) / 11;
+
+    printf("MEDIA = %.5f", notafinal);
+    
+	return 0;
+}
