@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+    float valor, taxa, conta;
+    
+         scanf("%f", &valor);
+         taxa = valor * (0.10);
+         conta = valor + taxa;
+         
+         printf("%.2f", conta);
+	return 0;
+}
