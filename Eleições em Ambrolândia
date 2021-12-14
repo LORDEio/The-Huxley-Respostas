@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+
+    double a, b, v, ali, alc, bran, nul, total;
+    ali=0;
+    alc=0;
+    bran=0;
+    nul=0;
+    total=0;
+    a=0;
+    b=0;
+
+            do{
+                scanf("%lf", &v);
+                if(v<0)
+                    break;
+                if(v==83)
+                    ali++;
+                if(v==93)
+                    alc++;
+                if(v==0)
+                    bran++;
+                if(v!=83 && v!=93 && v!=0)
+                    nul++;
+            }while(v>=0);
+                total = ali + alc + bran;
+                a=(ali/total)*100;
+                b=(alc/total)*100;
+                printf("%.0lf\n", ali);
+                printf("%.0lf\n", alc);
+                printf("%.0lf\n", bran);
+                printf("%.0lf\n", nul);
+                if(ali>alc)
+                    printf("83\n");
+                else
+                    printf("93\n");
+                printf("%.2lf\n",a);
+                printf("%.2lf\n",b);
+
+	return 0;
+}
