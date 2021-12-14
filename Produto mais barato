@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    float v1, v2, v3;
+    scanf("%f %f %f", &v1, &v2, &v3);
+    if(v1<v2 && v1<v3){
+        printf("Primeiro produto");
+    }else if(v2<v1 && v2<v3){
+        printf("Segundo produto");
+    }else if(v3<v1 && v3<v2)
+    printf("Terceiro produto");
+	return 0;
+}
