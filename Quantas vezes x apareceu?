@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int seq[10];
+    int k=0, i, n;
+
+    for(i=0; i<10; i++){
+    scanf("%d", &seq[i]);
+    }
+    scanf("%d", &n);
+    for(i=0; i<10; i++){
+    if(seq[i]==n)
+    k = k+1;
+    
+    }
+printf("%d\n", k);
+
+	return 0;
+}
