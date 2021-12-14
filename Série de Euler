@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+double fatorial(double n)
+{
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return n * fatorial(n-1);
+    }
+}
+
+double euler(double n, double passo, double tot)
+{
+    if (passo == n)
+    {
+        return tot;
+    }
+    else
+    {
+        return euler(n, passo+1.0, tot+(1/fatorial(passo)));
+    }
+}
+
+int main()
+{
+    double n;
+    scanf("%lf", &n);
+
+    double result = euler(n, 0.0, 0.0);
+    printf("%.15lf\n", result);
+
+    return 0;
+}
