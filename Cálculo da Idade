@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int idade1, idade2, atual;
+    
+    scanf("%d", &idade1);
+    scanf("%d", &idade2);
+    
+    atual = idade2 - idade1;
+    printf("%d", atual);
+	return 0;
+}
