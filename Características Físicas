@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+typedef struct
+{
+    char sexo, cabelo, olhos;
+    int idade;
+    
+}DADOS;
+
+int main() {
+    
+    float percent_mvl;
+    int i, mvl = 0, maior = 0, total = 0;
+    DADOS dados_var;
+    
+    for(i = 0; i < 100; i++)
+    {
+        scanf("%d\n", &dados_var.idade);
+        if(dados_var.idade == -1)
+        {
+            break;
+        }
+        scanf("%c %c %c", &dados_var.sexo, &dados_var.cabelo, &dados_var.olhos);
+        if(dados_var.idade >= 18 && dados_var.idade <= 35)
+        {
+            if(dados_var.sexo == 'f')
+            {
+                if(dados_var.cabelo == 'l')
+                {
+                    if(dados_var.olhos == 'v')
+                    {
+                        mvl++;
+                    }
+                }
+            }
+        }
+        if(dados_var.idade > maior)
+        {
+            maior = dados_var.idade;
+        }
+        total++;
+    }
+    percent_mvl = (mvl * 100) / (float)total;
+    
+    printf("Mais velho: %d\n", maior);
+    printf("Mulheres com olhos verdes, loiras com 18 a 35 anos: %.2f%\n", percent_mvl);
+    return 0;
+}
