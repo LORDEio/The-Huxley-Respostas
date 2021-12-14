@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+   
+   double v1, v2, p1v, p2v, vf, p1, p2, cod1, cod2;
+    
+           scanf("%lf", &p1);
+           scanf("%lf", &v1);
+           scanf("%lf\n", &cod1);
+           
+           scanf("%d", &p2);
+           scanf("%lf", &v2);
+           scanf("%lf", &cod2);
+           
+                p1v = v1 * cod1;
+                p2v = v2 * cod2;
+                vf = p1v + p2v;
+                
+                    printf("VALOR A PAGAR: R$ %.2lf", vf);
+           
+           
+	return 0;
+}
