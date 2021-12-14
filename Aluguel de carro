@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int dia;
+    double km, kmtotal, diatotal, desconto, valortotal, total;
+    
+    scanf("%d", &dia);
+    scanf("%lf", &km);
+    
+    kmtotal = km * (0.01);
+    diatotal = (int)dia * (30.00);
+    valortotal = diatotal + kmtotal;
+    desconto = (0.10) * valortotal;
+    total = valortotal - desconto;
+    
+    printf("%.2lf", total);
+    
+    
+    
+	return 0;
+}
