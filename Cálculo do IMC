@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    float kg, m, imc;
+    
+    scanf("%f", &kg);
+    scanf("%f", &m);
+    
+          imc = kg/(m*m);
+          
+              printf("%.2f", imc);
+	return 0;
+}
