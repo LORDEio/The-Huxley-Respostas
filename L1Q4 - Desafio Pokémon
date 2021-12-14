@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+    char atq[11], def[11];
+    int tam, i, vant = 0, desv = 0;
+    
+    scanf("%s\n", atq);
+    scanf("%s", def);
+   
+    if(strcmp(atq, def) == 0)
+    {
+        printf("Empate\n");
+    }
+    else if(strcmp(atq, def) != 0)
+    {
+        
+        if(strcmp(atq, "Agua") == 0)
+        {
+            if(strcmp(def, "Fogo") == 0)
+            {
+                printf("Vantagem\n");
+            }
+            else if(strcmp(def, "Planta")== 0)
+            {
+                printf("Desvantagem\n");
+            }
+        }
+        
+        else if(strcmp(atq, "Planta") == 0)
+        {
+            if(strcmp(def, "Agua") == 0)
+            {
+                printf("Vantagem\n");
+            }
+            else if(strcmp(def, "Fogo") == 0)
+            {
+                printf("Desvantagem\n");
+            }
+        }
+       
+        else if(strcmp(atq, "Fogo") == 0)
+        {
+            if(strcmp(def, "Planta") == 0)
+            {
+                printf("Vantagem\n");
+            }
+            else if(strcmp(def, "Agua") == 0)
+            {
+                printf("Desvantagem\n");
+            }
+        }
+    }
+    return 0;
+}
