@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main(void) 
+{
+  int n, i, cont = 1;
+
+  scanf("%i", &n);
+
+  for(i = cont; i <= n; i++)
+  {
+    if (n % cont == 0)
+      printf("%i\n", cont);
+    cont++;
+  }
+}
