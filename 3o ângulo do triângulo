@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    float a1, a2, a3, af;
+    
+    scanf("%f", &a1);
+    scanf("%f", &a2);
+    
+    a3= a1+ a2;
+    af= a3-180;
+    printf("3o angulo=%f", fabs(af));
+    
+	return 0;
+}
