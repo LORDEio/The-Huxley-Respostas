@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+    int l, c, i, j, m[100][100], mt[100][100], linhasT, colunasT;
+    
+    scanf("%d%d", &l, &c);
+    
+    linhasT = c;
+    colunasT = l;
+    
+    for(i = 0; i < l; i++)
+    {
+        for(j = 0; j < c; j++)
+        scanf("%d", &m[i][j]);
+    }
+    for(i = 0; i < linhasT; i++)
+    {
+        for(j = 0; j < colunasT; j++)
+            mt[i][j] = m[j][i];
+    }
+    for(i = 0; i < linhasT; i++)
+    {
+        for(j = 0; j < colunasT; j++)
+            printf("%d ", mt [i][j]);
+        printf("\n");
+    }
+
+    return 0;
+}
