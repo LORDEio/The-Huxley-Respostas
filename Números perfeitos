@@ -1,0 +1,25 @@
+int main() 
+{
+  int n, i, j, soma = 0;
+  scanf("%d", &n);
+
+  for(i = 1; i < n; i++)
+  {
+    soma = 0;
+    
+    for(j = 1; j <= i ; j++)
+    {
+      if(i % j == 0)
+      {
+        soma = soma + j;
+      }
+    }
+    if(soma == i * 2)
+    {
+      printf("%d\n", i);
+    }
+    
+  }
+    
+  return 0;
+}
