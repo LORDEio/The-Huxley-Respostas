@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+
+            int n, b, soma;
+            n=0;
+            b=0;
+            soma=0;
+            while(n<100)
+            {
+                n++;
+                soma = n + soma;
+            }
+            printf("Soma dos 100 primeiros inteiros: %d", soma);
+
+	return 0;
+}
