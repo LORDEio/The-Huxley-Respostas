@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {{
+    int n, k, i, j, metade;
+    int soma = 0, impar = 0, primo = 0;
+
+    scanf("%d%d", &n, &k);
+    int vet[n];
+
+    metade = n/2;
+
+    for(i = 0; i < n; i++)
+        scanf("%d", &vet[i]);
+
+    for(i = 0; i < n; i++)
+    {
+        for(j = 0; j < n; j++)
+        {
+        if(i != j)
+        {
+            if(vet[i] + vet[j] == k)
+            soma++;
+        }
+        }
+            if(vet[i] % 2 != 0)
+            impar ++;
+    }
+    for(i = 0; i < n; i++)
+    {
+    if(vet[i] != 1)
+    {
+            if(vet[i] % 2 != 0 && vet[i] % 3 != 0 && vet[i] % 5 != 0)
+            primo++;
+    }
+    }
+
+    if((n < 5 || n > 40) || (k < 1 || k > 31))
+    {
+        printf("ENTRADA INVALIDA\n");
+        return 0;
+    }
+
+    if(soma/2 > 0)
+        printf("Promocao 1: SIM\n");
+    else if(soma/2 == 0)
+        printf("Promocao 1: NAO\n");
+
+    if(impar > metade)
+        printf("Promocao 2: SIM\n");
+    else if(impar <= metade)
+        printf("Promocao 2: NAO\n");
+
+    if(primo > 0)
+        printf("Promocao 3: SIM\n");
+    else if(primo == 0)
+        printf("Promocao 3: NAO\n");
+
+    if(soma/2 > 0 && impar > metade && primo > 0)
+        printf("Promocao 4: SIM\n");
+    else
+        printf("Promocao 4: NAO\n");
+    return 0;
+}
+	return 0;
+}
