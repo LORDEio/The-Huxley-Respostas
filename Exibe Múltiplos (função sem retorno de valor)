@@ -1,0 +1,24 @@
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+void multiplos(int inicio, int fim, int x);
+
+int main()
+{
+  int inicio, fim, x;
+  scanf("%d%d%d", &inicio, &fim, &x); 
+  multiplos (inicio,fim,x);
+return 0;
+}
+
+void multiplos(int inicio, int fim, int x)
+{
+  int y;
+  for(y=inicio;y<=fim;y++)
+  {
+    if(y%x==0)
+    {
+      printf("%d\n", y);
+    }
+  }
+}
