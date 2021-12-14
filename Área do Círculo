@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+    double raio, total, totalm;
+    
+           scanf("%lf", &raio);
+           
+           total= (raio * raio) *(3.14159);
+           totalm = total/10000;
+           
+           printf("Area = %.4lf", totalm);
+           
+	return 0;
+}
