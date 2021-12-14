@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+           int carros, falta;
+           float v;
+           
+           scanf("%d", &carros);
+           
+           falta = carros - 42;
+           v = falta * (1.75);
+           
+                printf("%.2f", fabs(v));
+	return 0;
+}
