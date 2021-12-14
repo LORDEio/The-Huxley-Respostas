@@ -1,0 +1,40 @@
+struct produtos{
+    
+    int code;
+    char desc[256];
+    float preco;
+};
+
+int main() {
+    
+    
+    float total=0;
+    int k, i=0, code=1, qtd;
+    
+    scanf("%d\n", &k);
+    
+    struct produtos produtos_var[k];
+    
+    while(i<k){
+        scanf("%d\n", &produtos_var[i].code);
+        scanf("%[^\n]", produtos_var[i].desc);
+        scanf("%f\n", &produtos_var[i].preco);
+        i++;
+    }
+    while(code != 0){
+        scanf("%d\n", &code);
+        scanf("%d\n", &qtd);
+        if(code == 0){
+            break;
+        }else{
+            for(i=0; i<k; i++){
+                if(code == produtos_var[i].code && qtd > 0){
+                    total += produtos_var[i].preco*qtd;
+                }
+            }
+        }
+    }
+    printf("%.2f", total);
+    
+    return 0;
+}
