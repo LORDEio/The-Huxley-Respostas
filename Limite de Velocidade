@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+double CalculaMulta(int v);
+int main() {
+    int velocidade;
+    scanf("%d", &velocidade);
+    printf("%.2lf\n", CalculaMulta(velocidade));
+	return 0;
+}
+double CalculaMulta(int v)
+{
+    double multa;
+    if(v <= 50)
+    {
+        multa =0;
+    }
+    else if(v<= 50 *1.1)
+    {
+        multa =230;
+    }
+    else if(v<= 50* 1.2)
+    {
+        multa =340;
+    }
+    else
+    {
+        multa = 19.28 *(v-50);
+    }
+    return multa;
+}
