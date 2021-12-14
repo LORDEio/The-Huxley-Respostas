@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+  int i, j, k, cont=0;
+  char letra_m[2] = "a";
+  char letra_M[2] = "A";
+  char texto[256];
+  gets(texto);
+
+
+
+  for (int i = 0; texto[i] != '\0'; i++)
+  {
+    if(texto[i] == letra_m[j] || texto[i] == letra_M[k])
+    {
+      cont++;
+    }
+  }
+  printf("%d", cont);
+
+    return 0;
+}
