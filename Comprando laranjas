@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+    
+    float preco, b, l;
+    
+    
+    scanf("%f", &l);
+    
+    b = l/12;
+    preco= b * (8.35);
+    
+    printf("%.0f\n", floor(b));
+    printf("%.2f", preco);
+    
+    
+	return 0;
+}
