@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+typedef struct
+{   
+    char disc;
+    char nome[256];
+    int idade;
+    int esco;
+    
+} Alunos;
+int main()
+{   char nome_jovem[255] = "";
+    int qtd_filo = 0, qtd_socio = 0, idade_jovem, aprovado = 0;
+    Alunos alunos_var;
+
+    scanf("%d", &alunos_var.esco);
+    
+    if (alunos_var.esco >= 0)
+    {
+        scanf(" %[^\n]", alunos_var.nome);
+        scanf("%d", &alunos_var.idade);
+        scanf(" %c", &alunos_var.disc);
+        
+        strcpy(nome_jovem, alunos_var.nome);
+        idade_jovem = alunos_var.idade;
+    }
+
+    if (alunos_var.esco >= 70)
+        aprovado++;
+
+    if (alunos_var.disc == 'f' && alunos_var.esco >= 70)
+        qtd_filo++;
+
+    else if (alunos_var.disc == 's' && alunos_var.idade >= 18 && alunos_var.esco < 70)
+        qtd_socio++;
+
+    while (alunos_var.esco >= 0)
+    {
+        scanf("%d", &alunos_var.esco);
+
+        if (alunos_var.esco >= 0)
+        {
+            scanf(" %[^\n]", alunos_var.nome);
+            scanf("%d", &alunos_var.idade);
+            scanf(" %c", &alunos_var.disc);
+
+            if (alunos_var.idade < idade_jovem)
+            {
+                strcpy( nome_jovem, alunos_var.nome);
+                idade_jovem = alunos_var.idade;
+            }
+
+            if (alunos_var.esco >= 70)
+                aprovado++;
+
+            if (alunos_var.disc == 'f' && alunos_var.esco >= 70)
+                qtd_filo++;
+
+            else if (alunos_var.disc == 's' && alunos_var.idade >= 18 && alunos_var.esco < 70)
+                qtd_socio++;
+        }
+    }
+    printf("Quantidade de aprovados em filosofia : %d\n", qtd_filo);
+    if (strlen(nome_jovem) > 0)
+        printf("O nome da pessoa mais jovem : %s\n", nome_jovem);
+
+    printf("Quantidade de aprovados : %d\n", aprovado);
+    printf("Quantidade pessoas maiores de idade nao aprovadas em sociologia : %d\n", qtd_socio);
+}
