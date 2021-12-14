@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int nestrelas_hotel1, nestrelas_hotel2;
+    char hotel1[50], hotel2[50], cafehotel1[4], cafehotel2[4];
+    float precohotel1, precohotel2;
+    gets(hotel1);
+    gets(hotel2);
+    
+    scanf("%d %d", &nestrelas_hotel1, &nestrelas_hotel2);
+    scanf("%s %s", cafehotel1, cafehotel2); 
+    scanf("%f %f", &precohotel1, &precohotel2); 
+    
+    if(nestrelas_hotel1 == nestrelas_hotel2){
+        if(strcmp(cafehotel1, cafehotel2) == 0){
+            if(precohotel1 == precohotel2){
+                printf("Ambos os hoteis sao boas opcoes de estadia!");
+            }else if(precohotel1<precohotel2){
+                printf("O hotel %s e a melhor opcao de estadia!", hotel1);
+            }else{
+                printf("O hotel %s e a melhor opcao de estadia!", hotel2);
+            }
+        }else if(strcmp(cafehotel1, "Sim") == 0){
+            printf("O hotel %s e a melhor opcao de estadia!", hotel1);
+        }else{
+            printf("O hotel %s e a melhor opcao de estadia!", hotel2);
+        }
+    }else if(nestrelas_hotel1>nestrelas_hotel2){
+        printf("O hotel %s e a melhor opcao de estadia!", hotel1);
+    }else{
+        printf("O hotel %s e a melhor opcao de estadia!", hotel2);
+    }
+    
+    return 0;
+}
