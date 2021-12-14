@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{   
+    int aux;
+    char nome[51], brinq[51];
+    
+    
+    fgets(nome, 51, stdin);
+    fgets(brinq, 51, stdin);
+    aux= strlen(nome);
+    if (nome[aux-1]== '\n')
+        nome[aux-1]='\0';
+    aux= strlen(brinq);
+    
+        if(brinq[aux-1]=='\n')
+        brinq[aux-1]= '\0';
+    
+        printf("Bem-vindo %s! Aguardamos você na/o %s!", nome, brinq);
+    return 0;
+}
