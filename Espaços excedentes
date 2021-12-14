@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+    int i, j, tam;
+    char texto[301], k[301];
+    
+
+    fgets(texto, 301, stdin);
+    tam = strlen(texto);
+    if(texto[tam - 1] == '\n')
+        texto[tam - 1] = '\0';
+
+    j = 0;
+    for (i = 0; i < tam; i++)
+        if(texto[i] == ' ' && texto[i-1] == ' ')
+        {
+        }
+        else
+        {
+            k[j] = texto[i];
+            j++;
+        }
+
+printf("%s", k);
+return 0;
+}
