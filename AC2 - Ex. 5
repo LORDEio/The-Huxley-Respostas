@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {int segundos, d, h, m, s, resto, resto1;
+
+    scanf("%d", &segundos);
+    d = segundos / 86400;
+        resto = segundos % 86400;
+        resto1 = segundos % 3600;
+    h = resto / 3600;
+    m = resto1 / 60;
+    s = resto % 60;
+  
+        printf("%d\n", d);
+        printf("%d\n", h);
+        printf("%d\n", m);
+        printf("%d\n", s);
+	return 0;
+}
