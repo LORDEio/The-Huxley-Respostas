@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+            int ig, ia, encap, inden, strc;
+
+                scanf("%d %d %d %d %d", &ig, &ia, &encap, &inden, &strc);
+                if(((ig==0) && (ia==0)) || (encap==0) || (inden==0) || (strc==0))
+                    printf("0");
+                else
+                    printf("\nAVALIADO");
+
+	return 0;
+}
