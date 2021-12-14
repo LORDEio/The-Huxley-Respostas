@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+         float m3, vr, vf, taxa, conta;
+             
+             scanf("%f\n", &m3);
+             scanf("%f", &vr);
+             
+             vf = (m3 *1000)*vr;
+             taxa = vf * (0.80);
+             conta = taxa + vf;
+             
+                    printf("%.2f\n", vf);
+                    printf("%.2f\n", taxa);
+                    printf("%.2f\n", conta);
+             
+	return 0;
+}
