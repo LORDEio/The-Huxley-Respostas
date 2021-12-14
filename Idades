@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+
+    float id, idf, i, idff;
+    id =0;
+    i=0;
+    idf= 0;
+    do{
+        idf = id + idf;
+        scanf("%f", &id);
+        if(id<0){
+            break;}
+        i++;
+    }while(id>=0);
+        idff = idf/i;
+        printf("%.2f\n", idff);
+	return 0;
+}
