@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+typedef struct{
+    
+    int qtd_amigos;
+    int qtd_fotos;
+    int idade;
+    char nome[51];
+    char sexo[2];
+    char estado_civil[2];
+   
+}DADOS;
+
+int main(){
+    
+    int n, i;
+    DADOS dados_var[n];
+    
+    scanf("%d", &n); fflush(stdin);
+    
+    for(i = 0; i < n; i++)
+    {
+        scanf("%d\n", &dados_var[i].idade); fflush(stdin);
+        gets(dados_var[i].nome); 
+        gets(dados_var[i].sexo);
+        gets(dados_var[i].estado_civil);
+        scanf("%d", &dados_var[i].qtd_amigos); fflush(stdin);
+        scanf("%d", &dados_var[i].qtd_fotos); fflush(stdin);
+        printf("\nIdade: %d",dados_var[i].idade);
+        printf("\nNome: %s", dados_var[i].nome);
+        printf("\nSexo: %s", dados_var[i].sexo);
+        printf("\nEstado Civil: %s", dados_var[i].estado_civil);
+        printf("\nNumero de amigos: %d", dados_var[i].qtd_amigos);
+        printf("\nNumero de fotos: %d", dados_var[i].qtd_fotos);
+        printf("\n");
+    }
+    
+
+    return 0;
+}
