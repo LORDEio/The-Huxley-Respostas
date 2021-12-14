@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+    int i, j, n, seq, menorposi, menorseq, arr_size = 0;
+    
+    
+    scanf("%d", &n);
+    
+   
+    int arr[n];
+    
+    
+   
+    scanf("%i", &arr[0]);
+    arr_size = arr[0];
+    
+    for (i = 1; i < n; i++)
+    {
+        scanf("%i", &arr[i]);
+        
+       
+        if (arr[i] > arr_size)
+        {
+            arr_size = arr[i];
+        }
+    }
+        menorposi = 1;
+        menorseq = 0;
+    
+    
+    for (j = 0; j < n; j++)
+    {
+        menorseq += abs(arr[j] - 1);
+    }
+
+    for (i = 2; i <= arr_size; i ++)
+    {
+        seq = 0;
+        for (j = 0; j < n; j++)
+        {
+            seq += abs(arr[j] - i);
+        }
+        if (seq < menorseq)
+        {
+            menorposi = i;
+            menorseq = seq;
+        }
+    }
+    printf("%d %d", menorseq, menorposi);
+    
+    return 0;
+}
