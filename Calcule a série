@@ -1,0 +1,28 @@
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    float i, i2, vt, v, n, i2f;
+    i2=0;
+    i=1;
+    vt=0;
+    v=0;
+    scanf("%f", &n);
+    for(i=1; i<=n;i++)
+    {
+        i2++;
+        v = i/(3*i2);
+        i2f = i2*3;
+        vt= v+ vt;
+    printf("%.0f/%.0f", i, i2f);
+    if(i>=n)
+    {
+        break;
+    }else printf(" + ");
+    }
+    printf("\n%.2f", vt);
+	return 0;
+}
