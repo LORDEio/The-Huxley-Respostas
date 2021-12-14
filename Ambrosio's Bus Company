@@ -1,0 +1,42 @@
+struct passageiros{
+    
+    char data[20];
+    char origem[256];
+    char destino[256];
+    char horario[10];
+    char nome[256];
+    int cdpass;
+    int poltrona;
+    int idade;
+    
+};
+
+int main() {
+    int i, k=0, media=0;
+    struct passageiros passageiros_var[44];
+    
+    for(i=0; i<44; i++){
+        scanf("%d\n", &passageiros_var[i].cdpass);
+        if(passageiros_var[i].cdpass == -1){
+            break;
+        }else{
+            scanf("%s\n", passageiros_var[i].data);
+            scanf("%[^\n]\n", passageiros_var[i].origem);
+            scanf("%[^\n]\n", passageiros_var[i].destino);
+            scanf("%s\n", passageiros_var[i].horario);
+            scanf("%d\n", &passageiros_var[i].poltrona);
+            scanf("%d\n", &passageiros_var[i].idade);
+            scanf("%[^\n]\n", passageiros_var[i].nome);
+            
+            media += passageiros_var[i].idade;
+            k++;
+        }
+    }
+    media /= k;
+    for(i=0; i<k; i++){
+        if(passageiros_var[i].idade>media && passageiros_var[i].poltrona%2 == 0){
+            printf("%s\n", passageiros_var[i].nome);
+        }
+    }
+    return 0;
+}
