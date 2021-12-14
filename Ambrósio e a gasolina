@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()    {
+      int D, R, L, G, P, gasto_viagem;
+      float Lf, lpor_distancia, dinheiro_gasolina;
+
+          scanf("%d""%d""%d""%d""%d", &D, &R, &L, &P, &G);
+
+              lpor_distancia = D/10;
+              Lf = L - lpor_distancia;
+
+              if(Lf<0){
+                dinheiro_gasolina = fabs(Lf) * G;
+                gasto_viagem = R - dinheiro_gasolina;
+                }
+
+                if((L * 10)< D/(P+1))
+                        {
+                            printf("Nao pode viajar.");
+                        }
+                    else
+                        {
+                        if((R<dinheiro_gasolina) && (lpor_distancia > L) || (lpor_distancia>L) && (P = 0)){
+                            printf("Nao pode viajar.");}
+
+                           else
+                        {
+                            printf("Pode viajar.\n");
+                            printf("R$: %d", gasto_viagem);}
+
+
+
+
+}
+	return 0;
+}
