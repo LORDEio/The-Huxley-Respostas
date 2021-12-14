@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <string.h>
+
+typedef struct{
+    int atack, defense;
+    int id;
+    int life;
+    int level;
+    char nome[21];
+   
+} Monsters;
+
+int main(void){
+
+    int qtd;
+    int i = 0;
+
+
+    scanf("%d ", &qtd);
+    
+
+    Monsters monsters_var[qtd];
+
+
+    fflush(stdin);
+    for(i = 0; i < qtd; i++){
+
+
+        gets(monsters_var[i].nome);
+        fflush(stdin);
+
+
+        scanf(" %d ", &monsters_var[i].id);
+        fflush(stdin);
+
+
+        scanf(" %d ", &monsters_var[i].level);
+        fflush(stdin);
+
+
+        scanf(" %d ", &monsters_var[i].life);
+        fflush(stdin);
+
+
+        scanf(" %d ", &monsters_var[i].atack);
+        fflush(stdin);
+
+ 
+        scanf(" %d ", &monsters_var[i].defense);
+        fflush(stdin);
+    }
+
+    for(i = 0; i < qtd; i++){
+
+        printf("Nome: %s\n", monsters_var[i].nome);
+
+        printf("ID: %d\n", monsters_var[i].id);
+
+        printf("Level: %d\n", monsters_var[i].level);
+
+        printf("Vida: %d\n", monsters_var[i].life);
+
+        printf("Ataque: %d\n", monsters_var[i].atack);
+
+        printf("Defesa: %d\n", monsters_var[i].defense);
+
+    }
+
+    return 0;
+}
